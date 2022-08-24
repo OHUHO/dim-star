@@ -1,12 +1,28 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import DiscoverView from "@/views/DiscoverView";
+import TendingView from "@/views/TendingView";
 
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    //component: HomeView
+    redirect: '/discover',
   },
+
+  {
+    path: '/discover',
+    name: 'discover',
+    component: DiscoverView,
+  },
+
+  {
+    path: '/tending',
+    name: 'tending',
+    component: TendingView
+  },
+
+
 
 ]
 
