@@ -35,6 +35,10 @@ export default {
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
 
+// 所有页面的动画效果
+.anim {
+	animation: bottom 0.8s var(--delay) both;
+}
 
 /*html {
 	box-sizing: border-box;
@@ -154,35 +158,6 @@ img {
 
 
 
-.button-wrapper {
-	display: flex;
-	align-items: center;
-	margin-left: auto;
-}
-.like {
-	display: flex;
-	align-items: center;
-	background-color: var(--button-bg);
-	color: #fff;
-	border: 0;
-	font-family: var(--body-font);
-	border-radius: 8px;
-	padding: 10px 16px;
-	font-size: 14px;
-	cursor: pointer;
-	&.red {
-		background-color: #ea5f5f;
-	}
-	svg {
-		width: 18px;
-		flex-shrink: 0;
-		margin-right: 10px;
-		padding: 0;
-	}
-	& + & {
-		margin-left: 16px;
-	}
-}
 
 .video-stats {
 	margin-left: 30px;
@@ -212,6 +187,7 @@ img {
 }
 
 
+// 浏览器滑动条
 ::-webkit-scrollbar {
 	width: 6px;
 	border-radius: 10px;

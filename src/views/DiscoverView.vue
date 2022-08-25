@@ -355,6 +355,119 @@ export default {
 					object-fit: cover;
 				}
 			}
+			.video-p {
+				margin-right: 12px;
+				object-fit: cover;
+				flex-shrink: 0;
+				border-radius: 50%;
+				position: relative;
+				top: 0;
+				left: 0;
+				.author-img {
+					border: 0;
+				}
+				
+				&-wrapper {
+					display: flex;
+					align-items: center;
+					
+					.author-wrapper {
+						position: relative;
+						flex-shrink: 0;
+						svg {
+							width: 16px;
+							padding: 2px;
+							background-color: #fff;
+							color: #0daabc;
+							border-radius: 50%;
+							border: 2px solid #0daabc;
+							position: absolute;
+							bottom: 5px;
+							right: 0;
+						}
+						
+						img{
+							width: 52px;
+							height: 52px;
+							border: 1px solid rgb(255 255 255 / 75%);
+							padding: 4px;
+							border-radius: 50%;
+							object-fit: cover;
+						}
+					}
+					
+					.author-img {
+						border: 0;
+					}
+					svg {
+						width: 20px;
+						padding: 4px;
+					}
+					
+					.msg-wrapper {
+						.name {
+							font-size: 13px;
+						}
+						.content {
+							line-height: 1.4em;
+							max-width: 26ch;
+							display: -webkit-box;
+							overflow: hidden;
+							-webkit-line-clamp: 2;
+							-webkit-box-orient: vertical;
+						}
+					}
+					@media screen and (max-width: 650px) {
+						flex-direction: column;
+						.button-wrapper {
+							margin: 20px auto 0;
+						}
+						.video-p-detail {
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+						}
+						.video-p {
+							margin-right: 0
+						}
+					}
+				}
+				&-sub {
+					font-size: 12px;
+				}
+				&-title {
+					font-size: 24px;
+					color: #fff;
+					line-height: 1.4em;
+					margin: 16px 0 20px;
+				}
+				&-subtitle {
+					font-size: 14px;
+					line-height: 1.5em;
+					max-width: 60ch;
+					& + & {
+						margin-top: 16px;
+					}
+				}
+				&-name {
+					margin-bottom: 8px;
+					color: #fff;
+					display: flex;
+					align-items: center;
+					&:after {
+						content: "";
+						width: 6px;
+						height: 6px;
+						background-color: #22b07d;
+						border-radius: 50%;
+						margin-left: 8px;
+						display: inline-block;
+					}
+					&.offline:after {
+						background-color: #ff7551;
+					}
+				}
+			}
 			.author {
 				position: absolute;
 				right: 10px;
