@@ -25,6 +25,7 @@
 import SideBarComponent from "@/components/SideBarComponent";
 import HeaderComponent from "@/components/HeaderComponent";
 
+
 export default {
 	components: {HeaderComponent, SideBarComponent}
 }
@@ -135,11 +136,6 @@ img {
 
 
 
-
-
-
-
-
 .seperate {
 	width: 3px;
 	height: 3px;
@@ -197,5 +193,9 @@ img {
 	background-color: rgb(21 20 26 / 63%);
 	border-radius: 10px;
 }
+
+
+
+
 
 </style>

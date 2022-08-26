@@ -52,10 +52,6 @@ export default {
 		width: 65%;
 		object-fit: cover;
 		transition: 0.3s;
-		&:hover .video-js .vjs-big-play-button {
-			opacity: 1;
-		}
-		
 		
 	}
 	

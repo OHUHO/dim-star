@@ -3,8 +3,8 @@
 	<div class="my-video">
 		<video
 			class="video-js vjs-default-skin anim"
-			width=640
-			height=267
+			width=640px
+			height=267px
 			controls
 			preload="auto"
 			poster='https://images.unsplash.com/photo-1476801071117-fbc157ae3f01?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8&w=1000&q=80'
