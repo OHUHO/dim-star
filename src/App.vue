@@ -10,9 +10,7 @@
 				<header-component></header-component>
 				
 				<div class="main-container">
-					<!--下面将是路由-->
 					<router-view></router-view>
-					
 				</div>
 			</div>
 		</div>
@@ -27,7 +25,25 @@ import HeaderComponent from "@/components/HeaderComponent";
 
 
 export default {
-	components: {HeaderComponent, SideBarComponent}
+	components: {HeaderComponent, SideBarComponent},
+	data(){
+		return{
+			isRouterAlive: true
+		}
+	},
+	/*provide(){
+		return{
+			reload: this.reload
+		}
+	},
+	methods:{
+		reload(){
+			this.isRouterAlive = false
+			this.$nextTick(() =>{
+				this.isRouterAlive = true
+			})
+		}
+	}*/
 }
 </script>
 
@@ -40,16 +56,19 @@ export default {
 .anim {
 	animation: bottom 0.8s var(--delay) both;
 }
-
-/*html {
-	box-sizing: border-box;
-	-webkit-font-smoothing: antialiased;
-}*/
-
-img {
-	max-width: 100%;
+@keyframes bottom {
+	0% {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	
+	100% {
+		opacity: 1;
+		transform: none;
+	}
 }
 
+//页面公共属性设置
 :root {
 	--body-font: "Inter", sans-serif;
 	--theme-bg: #1f1d2b;
@@ -91,95 +110,40 @@ img {
 		opacity: 0.4;
 		content: "";
 	}
-}
-
-.container {
-	background-color: var(--theme-bg);
-	max-width: 1240px;
-	max-height: 900px;
-	height: 95vh;
-	display: flex;
-	overflow: hidden;
-	width: 100%;
-	border-radius: 20px;
-	font-size: 15px;
-	font-weight: 500;
-	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-	position: relative;
-}
-
-@keyframes bottom {
-	0% {
-		transform: translateY(100px);
-		opacity: 0;
-	}
 	
-	100% {
-		opacity: 1;
-		transform: none;
-	}
-}
-
-.wrapper {
-	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
-}
-
-.main-container {
-	display: flex;
-	flex-direction: column;
-	padding: 0 30px 30px;
-	flex-grow: 1;
-	overflow: auto;
-}
-
-
-
-.seperate {
-	width: 3px;
-	height: 3px;
-	display: inline-block;
-	vertical-align: middle;
-	border-radius: 50%;
-	background-color: #fff;
-	margin: 0 6px;
-	&.video-seperate {
-		background-color: var(--body-color);
-	}
-}
-
-
-
-
-
-
-
-.video-stats {
-	margin-left: 30px;
-}
-
-
-
-
-
-
-@media screen and (max-width: 475px) {
-	.main-container {
-		padding: 0 20px 20px;
-	}
 	
-	.sidebar {
-		align-items: center;
-	}
-	body {
-		padding: 0;
-	}
 	.container {
-		height: 100vh;
-		border-radius: 0;
-		max-height: 100%;
+		background-color: var(--theme-bg);
+		max-width: 1240px;
+		max-height: 900px;
+		height: 95vh;
+		display: flex;
+		overflow: hidden;
+		width: 100%;
+		border-radius: 20px;
+		font-size: 15px;
+		font-weight: 500;
+		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+		position: relative;
+		
+		
+		.wrapper {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+			
+			
+			.main-container {
+				display: flex;
+				flex-direction: column;
+				padding: 0 30px 30px;
+				flex-grow: 1;
+				overflow: auto;
+			}
+			
+		}
 	}
+	
 }
 
 
@@ -193,9 +157,6 @@ img {
 	background-color: rgb(21 20 26 / 63%);
 	border-radius: 10px;
 }
-
-
-
 
 
 </style>

@@ -86,7 +86,7 @@ export default {
 					color: #fff;
 					display: flex;
 					align-items: center;
-					&:after {
+					/*&:after {
 						content: "";
 						width: 6px;
 						height: 6px;
@@ -97,7 +97,7 @@ export default {
 					}
 					&.offline:after {
 						background-color: #ff7551;
-					}
+					}*/
 				}
 				.sub{
 					font-size: 12px;
@@ -154,6 +154,26 @@ export default {
 	}
 }
 
+@media screen and (max-width: 640px) {
+	.video-wrapper{
+		flex-direction: column;
+		align-items: center;
+		
+		.author-other{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		.button{
+			margin-right: auto;
+			margin-top: 10px;
+		}
+	}
+	.title{
+		text-align: center;
+	}
+}
 
 
 </style>

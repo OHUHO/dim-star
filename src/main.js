@@ -3,9 +3,10 @@ import App from './App.vue'
 import router from './router'
 
 import Video from 'video.js'
-import "video.js/dist/video-js.css"
-import "videojs-flash"
-import "./assets/css/player.scss"
+require("video.js/dist/video-js.css")
+require("vue-video-player/")
+//import "videojs-flash"
+require("./assets/css/player.scss")
 import video_zhCN from 'video.js/dist/lang/zh-CN.json'
 
 

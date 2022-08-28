@@ -8,19 +8,23 @@ const routes = [
     path: '/',
     name: 'home',
     redirect: '/discover',
+    children:[
+      {
+        path: 'discover',
+        name: 'discover',
+        component: DiscoverView,
+      },
+
+      {
+        path: 'tending',
+        name: 'tending',
+        component: TendingView
+      },
+
+    ]
   },
 
-  {
-    path: '/discover',
-    name: 'discover',
-    component: DiscoverView,
-  },
 
-  {
-    path: '/tending',
-    name: 'tending',
-    component: TendingView
-  },
 
 
 

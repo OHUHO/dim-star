@@ -21,10 +21,17 @@
   display: flex;
   align-items: center;
   background-color: rgba(43, 51, 63, 0.7);
-  margin: 0px 30px 20px;
+  margin: 0 30px 20px;
   padding-left: 70px;
   width: calc(100% - 60px);
   border-radius: 10px;
+
+  @media screen and (max-width: 625px) {
+    padding-left: 0;
+    margin: 20px 2px;
+    width: calc(100% - 4px);
+    //width: 100%;
+  }
 
 }
 
@@ -99,3 +106,4 @@
 .video-js .vjs-tech {
   object-fit: cover;
 }
+

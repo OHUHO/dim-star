@@ -23,7 +23,27 @@ import ChatComponent from "@/components/tending/ChatComponent";
 import ChatVipComponent from "@/components/tending/ChatVipComponent";
 export default {
 	name: "TendingView",
-	components: {ChatVipComponent, ChatComponent, VideoComponent, VideoDetailComponent}
+	components: {ChatVipComponent, ChatComponent, VideoComponent, VideoDetailComponent},
+	
+	/*inject: ['reload'],
+	data(){
+		return{
+		
+		}
+	},*/
+
+	//watch:{
+	//	$route (to,from){
+	//		window.location.reload()
+	//		console.log(to ,from)
+	//	}
+	//},
+	/*mounted() {
+		if (location.href.indexOf("#reloaded") == -1) {
+			location.href = location.href + '#reloaded';
+			location.reload();
+		}
+	},*/
 }
 </script>
 
@@ -31,22 +51,7 @@ export default {
 
 .stream-area {
 	display: flex;
-	@media screen and (max-width: 940px) {
-		flex-direction: column;
-		.video-stream {
-			width: 100%;
-		}
-		.chat-stream {
-			margin-left: 0;
-			margin-top: 30px;
-		}
-		.video-js.vjs-fluid {
-			min-height: 250px;
-		}
-		.content {
-			max-width: 100%;
-		}
-	}
+	//min-width: 627px;
 	
 	.video-stream {
 		width: 65%;
@@ -61,5 +66,26 @@ export default {
 		
 	}
 }
+
+@media screen and (max-width: 900px) {
+	.stream-area{
+		flex-direction: column;
+		.video-stream {
+			width: 100%;
+		}
+		.chat-stream {
+			margin-left: 0;
+			margin-top: 30px;
+			width: 100%;
+		}
+		.video-js.vjs-fluid {
+			min-height: 250px;
+		}
+		.content {
+			max-width: 100%;
+		}
+	}
+}
+//627
 
 </style>
