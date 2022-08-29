@@ -82,7 +82,7 @@ export default {
 .home-page {
 	font-family: var(--body-font);
 	color: var(--body-color);
-	background-image: url(https://images.unsplash.com/photo-1520045892732-304bc3ac5d8e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80);
+	background-image: url(./assets/full-background.png);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;

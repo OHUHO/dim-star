@@ -1,14 +1,13 @@
 <template>
 	<div class="videos-box">
-		<div class="title anim" style="--delay: .3s">Related Videos</div>
+		<div class="title anim" style="--delay: .3s">相关话题</div>
 		
 		<div class="card anim"
 			v-for="item in cards"
 			:key="item.id"
 			style="--delay: .5s"
 		>
-			
-			<img class="img" :src="item.img" />
+			<img class="img" :src="item.img"  alt=""/>
 			<div class="content">
 				<div class="name">{{item.name}}</div>
 				<div class="by">{{item.by}}</div>
@@ -18,7 +17,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="button anim" style="--delay: .6s">See All related videos (32)</div>
+		<div class="button anim" style="--delay: .6s">查看全部</div>
 	</div>
 </template>
 
@@ -28,8 +27,8 @@ export default {
 	data(){
 		return{
 			cards:[
-				{id:0,img:'https://cdn.nohat.cc/thumb/f/720/3b55eddcfffa4e87897d.jpg',name:'Prepare for your first skateboard jump',by:'Jordan Wise',info1:'125.908 views',info2:'2 days ago'},
-				{id:1,img:'https://iamaround.it/wp-content/uploads/2015/02/pexels-photo-4663818.jpeg',name:'Prepare for your first skateboard jump',by:'Jordan Wise',info1:'125.908 views',info2:'2 days ago'},
+				{id:0,img:'http://image.wufazhuce.com/FjB5Nj2tXGO5SOtBnUwq0GFQqQ7z#pskt#&imgName=%u9996%u9875%u56FE&imgLink=http%3A%2F%2Fm.wufazhuce.com%2Fone%2F3677',name:'未来像盛夏的大雨，在我们还不及撑开伞时就扑面而来。',by:' Benjamin Davies',info1:'329 浏览',info2:'1 小时前'},
+				{id:1,img:'http://image.wufazhuce.com/FuLThNJCQOvKb-_z_VrBrW3RHQAG#pskt#&imgName=%u9996%u9875%u56FE&imgLink=http%3A%2F%2Fm.wufazhuce.com%2Fone%2F3671',name:'一场为期6个月的平静实验',by:'老杨的猫头鹰',info1:'9k 浏览',info2:'3 天前'},
 			],
 		}
 	}

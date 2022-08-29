@@ -15,7 +15,7 @@
 	<video
 		controls
 		preload="auto"
-		poster="../../assets/wall.jpeg"
+		poster="../../assets/img/wall.jpeg"
 	>
 		<source src="../../assets/video.mp4" type='video/mp4' />
 	</video>

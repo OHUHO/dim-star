@@ -1,8 +1,9 @@
 <template>
 	<div class="chat">
-		<div class="header anim">Live Chat
+		<div class="header anim">在线聊天
 			<span>
-				<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.212 7.762c0 2.644-2.163 4.763-4.863 4.763-2.698 0-4.863-2.119-4.863-4.763C4.486 5.12 6.651 3 9.35 3c2.7 0 4.863 2.119 4.863 4.762zM2 17.917c0-2.447 3.386-3.06 7.35-3.06 3.985 0 7.349.634 7.349 3.083 0 2.448-3.386 3.06-7.35 3.06C5.364 21 2 20.367 2 17.917zM16.173 7.85a6.368 6.368 0 01-1.137 3.646c-.075.107-.008.252.123.275.182.03.369.048.56.052 1.898.048 3.601-1.148 4.072-2.95.697-2.675-1.35-5.077-3.957-5.077a4.16 4.16 0 00-.818.082c-.036.008-.075.025-.095.055-.025.04-.007.09.019.124a6.414 6.414 0 011.233 3.793zm3.144 5.853c1.276.245 2.115.742 2.462 1.467a2.107 2.107 0 010 1.878c-.531 1.123-2.245 1.485-2.912 1.578a.207.207 0 01-.234-.232c.34-3.113-2.367-4.588-3.067-4.927-.03-.017-.036-.04-.034-.055.002-.01.015-.025.038-.028 1.515-.028 3.145.176 3.747.32z" /></svg>15,988 people
+				<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.212 7.762c0 2.644-2.163 4.763-4.863 4.763-2.698 0-4.863-2.119-4.863-4.763C4.486 5.12 6.651 3 9.35 3c2.7 0 4.863 2.119 4.863 4.762zM2 17.917c0-2.447 3.386-3.06 7.35-3.06 3.985 0 7.349.634 7.349 3.083 0 2.448-3.386 3.06-7.35 3.06C5.364 21 2 20.367 2 17.917zM16.173 7.85a6.368 6.368 0 01-1.137 3.646c-.075.107-.008.252.123.275.182.03.369.048.56.052 1.898.048 3.601-1.148 4.072-2.95.697-2.675-1.35-5.077-3.957-5.077a4.16 4.16 0 00-.818.082c-.036.008-.075.025-.095.055-.025.04-.007.09.019.124a6.414 6.414 0 011.233 3.793zm3.144 5.853c1.276.245 2.115.742 2.462 1.467a2.107 2.107 0 010 1.878c-.531 1.123-2.245 1.485-2.912 1.578a.207.207 0 01-.234-.232c.34-3.113-2.367-4.588-3.067-4.927-.03-.017-.036-.04-.034-.055.002-.01.015-.025.038-.028 1.515-.028 3.145.176 3.747.32z" /></svg>
+				90,338 人
 			</span>
 		</div>
 		<div class="messages">
@@ -13,18 +14,18 @@
 				:style="delay(item.id)"
 			>
 				<div class="author-wrapper">
-					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><path d="M20 6L9 17l-5-5" /></svg>
-					<img class="author-img" src="https://images.unsplash.com/photo-1560941001-d4b52ad00ecc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" />
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
+					<img class="author-img" :src="item.img"  alt=""/>
 				</div>
 				<div class="msg-wrapper">
-					<div class="name"> {{item.name}}</div>
+					<div class="name" :class="{offline:item.isOffline}"> {{item.name}}</div>
 					<div class="content"> {{item.desc}}</div>
 				</div>
 			</div>
 			
 		</div>
 		<div class="footer anim" style="--delay: .1s">
-			<input type="text" placeholder="Write your message">
+			<input type="text" placeholder="发表你的想法">
 		</div>
 	</div>
 </template>
@@ -35,17 +36,17 @@ export default {
 	data(){
 		return{
 			messages:[
-				{id:0,img:'',name:'Wijaya Adabi',desc:'Lorem ipsum clor sit, ame conse quae debitis'},
-				{id:1,img:'',name:'Wijaya',desc:'Lorem ipsum clor sit, ame conse '},
-				{id:2,img:'',name:'Adabi',desc:'Lorem ipsum clor sit, ame conse quae '},
-				{id:3,img:'',name:'Jerry',desc:'Lorem ipsum clor sit, ame conse  debitis'},
-				{id:4,img:'',name:'Aubuary',desc:'Lorem ipsum clor sit, ame '},
+				{id:0,img:'https://ae01.alicdn.com/kf/H94c78935ffa64e7e977544d19ecebf06L.jpg',name:'张子涵',desc:'欢迎大家发表自己的态度',isOffline:false},
+				{id:1,img:'https://ae01.alicdn.com/kf/Hdd856ae4c81545d2b51fa0c209f7aa28Z.jpg',name:'Jerry',desc:'共同营造美好的网络环境',isOffline:true},
+				{id:2,img:'https://ae01.alicdn.com/kf/Hf6c0b4a7428b4edf866a9fbab75568e6U.jpg',name:'王丽华',desc:'哈哈哈哈，大家一起加油！',isOffline:false},
+				{id:3,img:'https://pic1.zhimg.com/v2-30abf710aa138aff0a52b43552935578_r.jpg',name:'Aubuary',desc:'熹微网站欢迎大家的到来',isOffline:true},
+				{id:4,img:'https://ae01.alicdn.com/kf/Hd60a3f7c06fd47ae85624badd32ce54dv.jpg',name:'杜丽君',desc:'欢迎大家来到我的开源项目',isOffline:true},
 			]
 		}
 	},
 	methods:{
 		delay(id){
-			return "--delay:" + (id/10) + "s"
+			return "--delay:" + ((id+1)/10) + "s"
 		}
 	}
 }
@@ -116,7 +117,7 @@ export default {
 				img{
 					width: 52px;
 					height: 52px;
-					border: 1px solid rgb(255 255 255 / 75%);
+					//border: 1px solid rgb(255 255 255 / 75%);
 					padding: 4px;
 					border-radius: 50%;
 					object-fit: cover;

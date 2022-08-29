@@ -1,34 +1,34 @@
 <template>
-	<div class="header anim" style="--delay: 0s">Discover</div>
+	<div class="header anim" style="--delay: 0s">发现</div>
 	<div class="blogs">
 		<div class="blog anim" style="--delay: .1s">
-			<div class="title">How to do Basic Jumping and how to landing safely</div>
+			<div class="title">皮卡丘 | 不干什么，就为了干这个世界！ </div>
 			
 			<div class="author">
 				<div class="author-wrapper">
 					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><path d="M20 6L9 17l-5-5" /></svg>
-					<img src="https://images.unsplash.com/photo-1560941001-d4b52ad00ecc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" />
+					<img src="../../assets/img/pikachu.png" />
 				</div>
 				<div class="detail">
-					<div class="name">Thomas Hope</div>
-					<div class="info">53K views <span class="separate"></span>2 weeks ago</div>
+					<div class="name">皮卡丘</div>
+					<div class="info">690K 浏览 <span class="separate"></span>1 天前</div>
 				</div>
 			</div>
-			<div class="time">7 min</div>
+			<div class="time">6 分钟</div>
 		</div>
 		
 		<div class="blog anim" style="--delay: .2s">
-			<div class="title">Skateboard Tips You need to know</div>
+			<div class="title">年度最佳 | 2022年度颜色排行榜 </div>
 			
 			<div class="author tips">
-				<div class="time">7 min</div>
+				<div class="time">4 分钟</div>
 				<div class="author-wrapper">
 					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><path d="M20 6L9 17l-5-5" /></svg>
-					<img src="https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fG1lbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
+					<img src="https://ae01.alicdn.com/kf/H94c78935ffa64e7e977544d19ecebf06L.jpg" />
 				</div>
 				<div class="detail">
-					<div class="name">Tony Andrew</div>
-					<div class="info">53K views <span></span>2 weeks ago</div>
+					<div class="name">潘通色彩</div>
+					<div class="info">39K 浏览 <span></span>10 天前</div>
 				</div>
 			</div>
 		</div>
@@ -65,7 +65,7 @@ export default {
 	align-items: center;
 	
 	.blog {
-		background-image: url(https://assets.codepen.io/3364143/skate-removebg-preview.png);
+		background-image: url(../../assets/img/pikachu.png);
 		background-size: 80%;
 		background-position-x: 150px;
 		background-color: #31abbd;
@@ -84,7 +84,7 @@ export default {
 		
 		.title{
 			font-size: 25px;
-			max-width: 12ch;
+			max-width: 20ch;
 			font-weight: 600;
 			letter-spacing: 1px;
 			color: #fff;
@@ -168,7 +168,7 @@ export default {
 	.blog + .blog {
 		margin-left: 20px;
 		width: 35%;
-		background-image: url(https://assets.codepen.io/3364143/skate-removebg-preview.png);
+		background-image: url(../../assets/img/beautiful_girl.png);
 		background-color: unset;
 		background-color: darkseagreen;
 		background-position-x: 0;

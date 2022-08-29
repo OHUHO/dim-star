@@ -1,80 +1,23 @@
 <template>
-	<div class="small-header anim" style="--delay: .3s">Most Watched</div>
+	<div class="small-header anim" style="--delay: .3s">最多阅读</div>
 	<div class="videos">
-		<div class="video anim" style="--delay: .4s">
-			<div class="time">8 min</div>
+		<div
+			class="video anim"
+			v-for="item in watchList"
+			:key="item.id"
+			:style="delay(item.id)"
+		>
+			<div class="time">{{ item.time}}</div>
 			<div class="video-wrapper">
-				<video muted="">
-					<source src="" type="video/mp4">
-				</video>
+				<img :src="item.sourceSrc" >
 				<div class="author-wrapper author">
 					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><path d="M20 6L9 17l-5-5" /></svg>
-					<img class="img" src="https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+					<img class="img" :src="item.img" />
 				</div>
 			</div>
-			<div class="by">Andy William</div>
-			<div class="name">Basic how to ride your skateboard comfortly</div>
-			<div class="view">54K views<span class="seperate video-seperate"></span>1 week ago</div>
-		</div>
-		<div class="video anim" style="--delay: .5s">
-			<div class="time">8 min</div>
-			<div class="video-wrapper">
-				<video muted="">
-					<source src="https://player.vimeo.com/external/436572488.sd.mp4?s=eae5fb490e214deb9ff532dd98d101efe94e7a8b&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
-				</video>
-				<div class="author-wrapper author">
-					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><path d="M20 6L9 17l-5-5" /></svg>
-					<img class="img" src="https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-				</div>
-			</div>
-			<div class="by">Andy William</div>
-			<div class="name">Basic how to ride your skateboard comfortly</div>
-			<div class="view">54K views<span class="seperate video-seperate"></span>1 week ago</div>
-		</div>
-		<div class="video anim" style="--delay: .6s">
-			<div class="time">8 min</div>
-			<div class="video-wrapper">
-				<video muted="">
-					<source src="https://player.vimeo.com/external/436572488.sd.mp4?s=eae5fb490e214deb9ff532dd98d101efe94e7a8b&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
-				</video>
-				<div class="author-wrapper author">
-					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><path d="M20 6L9 17l-5-5" /></svg>
-					<img class="img" src="https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-				</div>
-			</div>
-			<div class="by">Andy William</div>
-			<div class="name">Basic how to ride your skateboard comfortly</div>
-			<div class="view">54K views<span class="seperate video-seperate"></span>1 week ago</div>
-		</div>
-		<div class="video anim" style="--delay: .7s">
-			<div class="time">8 min</div>
-			<div class="video-wrapper">
-				<video muted="">
-					<source src="https://player.vimeo.com/external/436572488.sd.mp4?s=eae5fb490e214deb9ff532dd98d101efe94e7a8b&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
-				</video>
-				<div class="author-wrapper author">
-					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><path d="M20 6L9 17l-5-5" /></svg>
-					<img class="img" src="https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-				</div>
-			</div>
-			<div class="by">Andy William</div>
-			<div class="name">Basic how to ride your skateboard comfortly</div>
-			<div class="view">54K views<span class="seperate video-seperate"></span>1 week ago</div>
-		</div>
-		<div class="video anim" style="--delay: .8s">
-			<div class="time">8 min</div>
-			<div class="video-wrapper">
-				<video muted="">
-					<source src="https://player.vimeo.com/external/436572488.sd.mp4?s=eae5fb490e214deb9ff532dd98d101efe94e7a8b&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
-				</video>
-				<div class="author-wrapper author">
-					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><path d="M20 6L9 17l-5-5" /></svg>
-					<img class="img" src="https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-				</div>
-			</div>
-			<div class="by">Andy William</div>
-			<div class="name">Basic how to ride your skateboard comfortly</div>
-			<div class="view">54K views<span class="seperate video-seperate"></span>1 week ago</div>
+			<div class="by" :class="{offline:item.isOffline}">{{item.by}}</div>
+			<div class="name">{{item.name}}</div>
+			<div class="view">{{ item.view1 }}<span class="separate video-separate"></span>{{item.view2}}</div>
 		</div>
 		
 	</div>
@@ -82,7 +25,24 @@
 
 <script>
 export default {
-	name: "VideoComponent"
+	name: "VideoComponent",
+	data(){
+		return {
+			watchList:[
+				{id:0,time:'8分钟',sourceSrc:'https://img-blog.csdnimg.cn/fa3068595a6b4ab08a53bbf9a701d174.png',img:'https://ae01.alicdn.com/kf/H94c78935ffa64e7e977544d19ecebf06L.jpg',by:'京茶吉鹿',name:'教你快速开发一款高端、实用的网页！',view1:'120 浏览量',view2:'30 秒前',isOffline: false},
+				{id:1,time:'3分钟',sourceSrc:'https://tse1-mm.cn.bing.net/th/id/OIP-C.RcjQN5XLfQ6Bq_ZU0DjXEgHaFP?w=264&h=187&c=7&r=0&o=5&dpr=1.25&pid=1.7',img:'https://ae01.alicdn.com/kf/Hf6c0b4a7428b4edf866a9fbab75568e6U.jpg',by:'二月',name:'如何面对一份自己不喜欢的工作？',view1:'99浏览量',view2:'3 分钟前',isOffline: true},
+				{id:2,time:'10分钟',sourceSrc:'https://tse3-mm.cn.bing.net/th/id/OIP-C.vXOyUC25GO7XPIsNf98SiwHaE8?w=270&h=181&c=7&r=0&o=5&dpr=1.25&pid=1.7',img:'https://ae01.alicdn.com/kf/Hd60a3f7c06fd47ae85624badd32ce54dv.jpg',by:'雷旺',name:'人生需要按照计划一步步进行吗？',view1:'23k 浏览量',view2:'1 小时前',isOffline: false},
+				{id:3,time:'2分钟',sourceSrc:'https://tse2-mm.cn.bing.net/th/id/OIP-C.TwZfHULPCojybK45_67BwgAAAA?w=264&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7',img:'https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg',by:'William',name:'你想在30岁之前完成那些事儿？',view1:'12 浏览量',view2:'20分钟前',isOffline: false},
+				{id:4,time:'30分钟',sourceSrc:'https://tse1-mm.cn.bing.net/th/id/OIP-C.EoZVouvhTO6eSgQZFKGnNQHaEn?w=277&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7',img:'https://ae01.alicdn.com/kf/Hdd856ae4c81545d2b51fa0c209f7aa28Z.jpg',by:'张三',name:'爱一个人的时候，是爱这个人还是爱这个人的感觉？',view1:'123k 浏览量',view2:'3 天前',isOffline: true},
+				{id:5,time:'7分钟',sourceSrc:'https://tse4-mm.cn.bing.net/th/id/OIP-C.0zKT1Irqwd461cdovgvipAHaEL?w=296&h=183&c=7&r=0&o=5&dpr=1.25&pid=1.7',img:'https://pic1.zhimg.com/v2-30abf710aa138aff0a52b43552935578_r.jpg',by:'Jerry',name:'那句台词里的情谊，最让你回味无穷？',view1:'100 浏览量',view2:'1 年前',isOffline: false},
+			]
+		}
+	},
+	methods:{
+		delay(id){
+			return "--delay:" + ((id+4)/10) + "s"
+		}
+	}
 }
 </script>
 
@@ -123,13 +83,14 @@ export default {
 		&-wrapper {
 			position: relative;
 			
-			video {
-				max-width: 100%;
+			img{
 				width: 100%;
-				border-radius: 20px 20px 0 0;
+				height: 120px;
 				display: block;
 				cursor: pointer;
 				transition: 0.4s;
+				//background-color: #6bbb9e;
+				
 			}
 			
 			.author-wrapper {
@@ -172,7 +133,7 @@ export default {
 		}
 		.by {
 			transition: 0.3s;
-			padding: 20px 20px 0px;
+			padding: 20px 20px 0;
 			display: inline-flex;
 			position: relative;
 			&:before {
@@ -208,7 +169,7 @@ export default {
 			background-color: var(--video-bg);
 			position: relative;
 			
-			.seperate {
+			.separate {
 				width: 3px;
 				height: 3px;
 				display: inline-block;
@@ -216,7 +177,7 @@ export default {
 				border-radius: 50%;
 				background-color: #fff;
 				margin: 0 6px;
-				&.video-seperate {
+				&.video-separate {
 					background-color: var(--body-color);
 				}
 			}
