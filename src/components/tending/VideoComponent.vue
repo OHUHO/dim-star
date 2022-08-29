@@ -13,6 +13,7 @@
 		</video>-->
 	
 	<video
+		class="anim"
 		controls
 		preload="auto"
 		poster="../../assets/img/wall.jpeg"
