@@ -5,7 +5,7 @@ import router from './router'
 import Video from 'video.js'
 require("video.js/dist/video-js.css")
 require("vue-video-player/")
-//import "videojs-flash"
+import "videojs-flash"
 require("./assets/css/player.scss")
 import video_zhCN from 'video.js/dist/lang/zh-CN.json'
 
