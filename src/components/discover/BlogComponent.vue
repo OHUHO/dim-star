@@ -1,5 +1,4 @@
 <template>
-	<div class="header anim" style="--delay: 0s">发现</div>
 	<div class="blogs">
 		<div class="blog anim" style="--delay: .1s">
 			<div class="title">皮卡丘 | 不干什么，就为了干这个世界！ </div>
@@ -7,7 +6,7 @@
 			<div class="author">
 				<div class="author-wrapper">
 					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><path d="M20 6L9 17l-5-5" /></svg>
-					<img src="../../assets/img/pikachu.png" />
+					<img src="../../assets/img/pikachu.png"  alt=""/>
 				</div>
 				<div class="detail">
 					<div class="name">皮卡丘</div>
@@ -24,7 +23,7 @@
 				<div class="time">4 分钟</div>
 				<div class="author-wrapper">
 					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><path d="M20 6L9 17l-5-5" /></svg>
-					<img src="https://ae01.alicdn.com/kf/H94c78935ffa64e7e977544d19ecebf06L.jpg" />
+					<img src="https://ae01.alicdn.com/kf/H94c78935ffa64e7e977544d19ecebf06L.jpg"  alt=""/>
 				</div>
 				<div class="detail">
 					<div class="name">潘通色彩</div>
@@ -42,23 +41,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-.header {
-	font-size: 30px;
-	color: #fff;
-	font-weight: 700;
-	padding-bottom: 20px;
-	position: sticky;
-	top: 0;
-	left: 0;
-	background: linear-gradient(
-			to bottom,
-			#1f1d2b 0%,
-			#1f1d2b 78%,
-			rgb(31 29 43 / 0%) 100%
-	);
-	z-index: 11;
-}
 
 .blogs{
 	display: flex;
