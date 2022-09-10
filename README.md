@@ -37,21 +37,24 @@
         vue add router
         ```
 
-    - 添加 sass-loader
+    - 添加 scss 需要的依赖
 
         ```shell
         npm install sass-loader sass --save-dev
         ```
 
-    - 添加 
+    - 添加 video 需要的依赖
 
         ```shell
-        
+        npm install video.js
         ```
     
-    - 添加
+        ```shell
+        npm install videojs-flash
+        ```
     
         ```shell
+        npm install vue-video-player
         ```
     
         
@@ -187,24 +190,24 @@ const routes = [
 
 ### 4.1、[发现]页面
 
-DiscoverView页面由上下两部分构成，可以拆分为如下两个组件
+DiscoverView页面由上下两部分构成，可以拆分为如下三个部分
 
-- BlogComponent
-- VideoComponent
+- header 头部
+
+- BlogComponent 组件
+- VideoComponent 组件
 
 在components文件夹下创建discover文件夹并创建上述两个组件
-
-
 
 DiscoverView.vue 文件中的代码如下
 
 ```html
 <template>
+    <div class="header anim" style="--delay: 0s">发现</div>
 	
 	<blog-component></blog-component>
 	
 	<video-component></video-component>
-	
 </template>
 ```
 
@@ -212,14 +215,17 @@ DiscoverView.vue 文件中的代码如下
 
 ##### ① 简介
 
-BlogComponent组件分由一个顶部的标签提示栏和卡片栏构成，样式大概如下所示
+BlogComponent组件分由一两个卡片样式构成，如下所示
 
-- header
 - blogs
     - blog
     - blog
 
-##### ② 界面预览
+##### ② 代码
+
+略……
+
+##### ③ 界面预览
 
 ![image-20220910165713176](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910165713176.png)
 
@@ -227,17 +233,141 @@ BlogComponent组件分由一个顶部的标签提示栏和卡片栏构成，样�
 
 #### 4.1.2、VideoComponent组件
 
-VideoComponent组件
+##### ① 简介
+
+VideoComponent组件由上下两部分构成，上部为小标签，下部为循环生成的videos列表，列表中的子video使用栅格布局，用户可以根据实际的需求来选择生成video的个数
+
+##### ② 代码
+
+略
+
+##### ③ 界面预览
+
+![image-20220910171142528](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910171142528.png)
 
 
+
+#### 4.1.3、[发现]界面预览
+
+![image-20220910171248907](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910171248907.png)
+
+![image-20220910171302924](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910171302924.png)
 
 
 
 ### 4.2、[热门]页面
 
+TendingView页面由左侧流和右侧流两部分构成。其中，左侧流结构由两部分构成，右侧流结构也由两部分构成
+
+- 左侧
+    - VideoComponent 组件
+    - VideoDetailComonent 组件
+- 右侧
+    - ChatComponet 组件
+    - ChatVipComponent组件
+
+在components文件夹下创建tending文件夹并创建上述的四个组件
+
+TendingView.vue 文件中的代码如下
+
+```html
+<template>
+	<div class="stream-area">
+		<!--左侧流-->
+		<div class="video-stream">
+			<video-component></video-component>
+			<video-detail-component></video-detail-component>
+		</div>
+		
+		<!--右侧流-->
+		<div class="chat-stream">
+			<chat-component></chat-component>
+			<chat-vip-component></chat-vip-component>
+		</div>
+	</div>
+</template>
+```
 
 
 
+#### 4.2.1、VideoComponent 组件
+
+##### ① 简介
+
+VideoComponent组件为自定义的视频播放组件
+
+文件assets/css/player.scss为我们自定义的视频播放器样式
+
+使用自定义的视频组件，我们可以选择局部或全局导入，此处我们选择全局导入，在main.js中引入自定义视频组件的样式
+
+##### ②代码
+
+在main.js中导入自定义视频播放器组件
+
+```javascript
+require("video.js/dist/video-js.css")
+require("vue-video-player/")
+import "videojs-flash"
+require("./assets/css/player.scss")
+```
+
+##### ③ 自定义播放器预览
+
+![image-20220910203115145](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910203115145.png)
+
+#### 4.2.2、VideoDetailComponent 组件
+
+##### ① 简介
+
+VideoDetailComponnent组件为视频详情组件，用于展示视频的详细信息，主要包含作者的信息和视频描述等内容
+
+##### ② 代码
+
+略
+
+##### ③ 界面预览
+
+![image-20220910203505702](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910203505702.png)
+
+
+
+#### 4.2.3、ChatComponent 组件
+
+##### ① 简介
+
+ChatComponent组件由头部功能提示块、底部的输入框和中间的一个循环生成的消息列表构成，主要展示用户当前的状态和消息
+
+##### ② 代码
+
+略
+
+##### ③ 页面预览
+
+![image-20220910205004399](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910205004399.png)
+
+
+
+#### 4.2.4、ChatVipComponent组件
+
+##### ① 简介
+
+ChatVipComponent组件的构成和ChatComponent组件的构成相似，同样是由三部分构成，不同的是中间为话题板块，底部为查看全部按钮
+
+##### ② 代码
+
+略
+
+##### ③ 页面预览
+
+![image-20220910205314110](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910205314110.png)
+
+
+
+#### 4.2.5、[热门]界面预览
+
+![image-20220910205550419](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910205550419.png)
+
+![image-20220910205606818](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910205606818.png)
 
 
 
