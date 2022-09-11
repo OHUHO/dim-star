@@ -371,49 +371,17 @@ ChatVipComponent组件的构成和ChatComponent组件的构成相似，同样是
 
 
 
+## 5、源码获取
+
+### ① GitHub
+
+[熹微（dim-star）——京茶吉鹿](https://github.com/a-jingchao/dim-star.git)
+
+### ② Gitee
+
+[熹微（dim-star）——京茶吉鹿](https://gitee.com/a-jingchao/dim-star.git)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
+**完**
 
