@@ -181,8 +181,7 @@ const routes = [
 
 
 ### 3.4、界面预览及布局
-
-![image-20220910162930855](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910162930855.png)
+![image-20220910162930855](https://user-images.githubusercontent.com/85296730/189506488-e101b41f-e422-4628-b0f1-6044ccd46b56.png)
 
 
 
@@ -227,7 +226,7 @@ BlogComponent组件分由一两个卡片样式构成，如下所示
 
 ##### ③ 界面预览
 
-![image-20220910165713176](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910165713176.png)
+![image-20220910165713176](https://user-images.githubusercontent.com/85296730/189506500-a99df480-981a-4a43-b2c2-efbeced66a8d.png)
 
 
 
@@ -243,15 +242,15 @@ VideoComponent组件由上下两部分构成，上部为小标签，下部为循
 
 ##### ③ 界面预览
 
-![image-20220910171142528](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910171142528.png)
+![image-20220910171142528](https://user-images.githubusercontent.com/85296730/189506504-8ae24f93-1de0-455a-8c2f-239b18aafb4e.png)
 
 
 
 #### 4.1.3、[发现]界面预览
 
-![image-20220910171248907](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910171248907.png)
+![image-20220910171248907](https://user-images.githubusercontent.com/85296730/189506508-25854612-5433-4f0a-8599-ee43d9b78714.png)
 
-![image-20220910171302924](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910171302924.png)
+![image-20220910171302924](https://user-images.githubusercontent.com/85296730/189506509-5ee2a731-78d2-4d3e-ab13-5923dabe9934.png)
 
 
 
@@ -313,7 +312,7 @@ require("./assets/css/player.scss")
 
 ##### ③ 自定义播放器预览
 
-![image-20220910203115145](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910203115145.png)
+![image-20220910203115145](https://user-images.githubusercontent.com/85296730/189506513-c6f64fd2-a9bb-4a5b-a142-3d86680496b8.png)
 
 #### 4.2.2、VideoDetailComponent 组件
 
@@ -327,7 +326,7 @@ VideoDetailComponnent组件为视频详情组件，用于展示视频的详细�
 
 ##### ③ 界面预览
 
-![image-20220910203505702](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910203505702.png)
+![image-20220910203505702](https://user-images.githubusercontent.com/85296730/189506517-554bc967-4959-46c5-b36c-770c017f75ce.png)
 
 
 
@@ -343,7 +342,7 @@ ChatComponent组件由头部功能提示块、底部的输入框和中间的一�
 
 ##### ③ 页面预览
 
-![image-20220910205004399](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910205004399.png)
+![image-20220910205004399](https://user-images.githubusercontent.com/85296730/189506524-dab8fae4-a45a-4354-863f-0f82f70a2cfc.png)
 
 
 
@@ -359,15 +358,15 @@ ChatVipComponent组件的构成和ChatComponent组件的构成相似，同样是
 
 ##### ③ 页面预览
 
-![image-20220910205314110](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910205314110.png)
+![image-20220910205314110](https://user-images.githubusercontent.com/85296730/189506530-c8ecb04a-8fd2-48c0-886e-7a429c598366.png)
 
 
 
 #### 4.2.5、[热门]界面预览
 
-![image-20220910205550419](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910205550419.png)
+![image-20220910205550419](https://user-images.githubusercontent.com/85296730/189506534-61858322-5fe0-4fd5-9766-84d36fae6416.png)
 
-![image-20220910205606818](C:\Users\Aubuary\AppData\Roaming\Typora\typora-user-images\image-20220910205606818.png)
+![image-20220910205606818](https://user-images.githubusercontent.com/85296730/189506540-10e1268c-9f23-41e2-8fa0-55a75826034d.png)
 
 
 
